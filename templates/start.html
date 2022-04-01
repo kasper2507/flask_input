@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: purple;
+            color: white;
+            margin: 0;
+        }
+        article {
+            padding: 20px;
+            background-color: lightgray;
+        }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            color: white;
+            text-align: right;
+            padding: 15px 10px;
+        }
+    </style>
+    <title>Document</title>
+
+</head>
+<body>
+    <header><h1>Title</h1></header>
+    <article>
+
+        <h3>Content belows</h3>
+
+        <form action="" mehod="POST">
+            {{ afrm.hidden_tag() }}
+            
+            <div class="form_item">
+                {{ afrm.customerID.label }}
+                {{ afrm.customerID(size=32) }}
+            </div>
+
+            <div class="form_item">
+                {{ afrm.inventoryID.label }}
+                {{ afrm.inventoryID(size=32) }}
+            </div>
+
+            <div class="form_item">
+                {{ afrm.staffID.label }}
+                {{ afrm.staffID(size=32) }}
+            </div>
+
+            <div class="form_item">
+                {{ afrm.amount.label }}
+                {{ afrm.amount(size=32) }}
+            </div>
+            
+            {{ afrm.submit() }}
+        </form>
+
+    </article>
+    <footer><p>Copyright &copy; Kasper 2022</p></footer>
+</body>
+</html>
