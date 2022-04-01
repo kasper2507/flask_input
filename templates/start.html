@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: purple;
+            color: white;
+            margin: 0;
+        }
+        article {
+            padding: 20px;
+            background-color: lightgray;
+        }
+        footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            color: white;
+            text-align: right;
+            padding: 15px 10px;
+        }
+    </style>
+    <title>Document</title>
+
+</head>
+<body>
+    <header><h1>Title</h1></header>
+    <article>
+
+        <h3>Content belows</h3>
+
+        <form action="" mehod="post" novalidate>
+            
+            {{ afrm.hidden_tag() }}
+            <p>
+                {{ afrm.customerID.label }}<br>
+                {{ afrm.customerID(size=32) }}
+            </p>
+            <p>{{ afrm.submit() }}</p>
+        
+              
+        </form>
+
+    </article>
+    <footer><p>Copyright &copy; Kasper 2022</p></footer>
+</body>
+</html>
